@@ -1,0 +1,5 @@
+My goal here was to have something that could quickly tell me which machine I was using and some specifics of it, an understanding of the current state and any actions that should be taken. But, at the same time it should be as concise as is practical and, importantly be fast to execute.
+
+Another addition I’ll make soon is to add configuration manager status, so in my case it will show the Chef last run, environment and roles applied. (This will also help remind me which boxes are using Chef before I change things which will automatically be reverted.)
+
+The following is broadly based upon the version provided by Canonical in Ubuntu 12.04, which is Copyright 2009-2010 Canonical Ltd. and licensed under the GPL. And so this lot is also1.
