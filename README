@@ -6,25 +6,25 @@ Another addition I’ll make soon is to add configuration manager status, so in 
 
 The following is broadly based upon the version provided by Canonical in Ubuntu 12.04, which is Copyright 2009-2010 Canonical Ltd. and licensed under the GPL. And so this lot is also1.
 
-###### Header (00-header)
+#### Header (00-header)
 The first part is the header. This comprises of the ASCII art hostname and the “Welcome…” text. I’m dynamically generating the ASCII art using the short version of the hostname, but you may wish to hard code it (obviously, this will need figlet installed.)
 
 
-###### System Information (10-sysinfo)
+#### System Information (10-sysinfo)
 This is slightly more complicated. Using a mix of standard utilities, /proc and some text parsing, it’s quite easy to assemble the system information section. As I’m only targetting Debian/Ubuntu, it’s quite easy to get this working.
 
 In the original implementation, Canonical use their “Landscape” product to generate the statistics which provides a bit more functionality than this does.
 
 
-###### Network Information (20-network)
+#### Network Information (20-network)
 Using a mix of standard utilities, /proc/net, /inet and some text parsing, it’s quite easy to assemble the network information section. As I’m only targetting Debian/Ubuntu, it’s quite easy to get this working.
 
 
-###### Updates (30-updates)
+#### Updates (30-updates)
 This is much more complicated than the other sections. Canonical achieves this in Ubuntu by using the same mechanism the GUI software updater works (the notifer, not synaptic). This implements the same requirement, but using the upstream dependency that — python-apt — which allows us to interact with apt’s internals.
 
 
-###### Footer (99-footer)
+#### Footer (99-footer)
 The default behaviour of motd is to present a combination of /etc/motd (which is regenerated on reboot) and /etc/motd.tail which is designed to append a sys admin message or similar.
 
 
