@@ -1,5 +1,41 @@
+About
+-----
 My goal here was to have something that could quickly tell me which machine I was using and some specifics of it, an understanding of the current state and any actions that should be taken. But, at the same time it should be as concise as is practical and, importantly be fast to execute.
 
 Another addition I’ll make soon is to add configuration manager status, so in my case it will show the Chef last run, environment and roles applied. (This will also help remind me which boxes are using Chef before I change things which will automatically be reverted.)
 
 The following is broadly based upon the version provided by Canonical in Ubuntu 12.04, which is Copyright 2009-2010 Canonical Ltd. and licensed under the GPL. And so this lot is also1.
+
+
+Installation
+------------
+
+
+Result
+------
+	Linux obscured-mysql02 3.2.0-4-amd64 #1 SMP Debian 3.2.60-1+deb7u1 x86_64
+       _                                 _                                 _ 
+	  ___ | |__  ___  ___ _   _ _ __ ___  __| |      _ __ ___  _   _ ___  __ _| |
+	 / _ \| '_ \/ __|/ __| | | | '__/ _ \/ _` |_____| '_ ` _ \| | | / __|/ _` | |
+	| (_) | |_) \__ \ (__| |_| | | |  __/ (_| |_____| | | | | | |_| \__ \ (_| | |
+	 \___/|_.__/|___/\___|\__,_|_|  \___|\__,_|     |_| |_| |_|\__, |___/\__, |_|
+	                                                           |___/        |_|  	            
+
+	Welcome to Debian GNU/Linux 7.5 (wheezy) (3.2.0-4-amd64).
+
+	System information as of: Tue Dec 16 09:26:18 CET 2014
+
+	System load:	0.05	Memory usage:	82.2% (free: 705Mb)
+	Usage on /:	13%	Swap usage:	0.0%
+	Local users:	1	Processes:	99
+	System uptime:	70 days, 16h 47m 51s
+
+	Network information:
+	System IP:	10.0.5.101
+	Traffic in:	27Gb	Traffic out:	65Gb
+
+	Updates:
+	71 updates to install.
+	0 are security updates.
+
+	Last login: Mon Dec 15 12:48:44 2014 from 10.0.2.13
