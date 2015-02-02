@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 #
-#    00-header - create the header of the MOTD
+#    20-network - generate the network information
 #    Copyright (c) 2014-2015 Erik Hennerfors
 #    Copyright (c) 2013-2014 Nick Charlton
 #    Copyright (c) 2009-2010 Canonical Ltd.
@@ -23,17 +23,18 @@
 #    with this program; if not, write to the Free Software Foundation, Inc.,
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+
 function human_readable {
-	VALUE=$1
+        VALUE=$1
         BIGGIFIERS=( B Kb Mb Gb )
-	CURRENT_BIGGIFIER=0
-	while [ $VALUE -gt 10000 ] ;do
-		VALUE=$(($VALUE/1000))
-		CURRENT_BIGGIFIER=$((CURRENT_BIGGIFIER+1))	
-	done
-	#echo "value: $VALUE"
-	#echo "biggifier: ${BIGGIFIERS[$CURRENT_BIGGIFIER]}"
-	echo "$VALUE${BIGGIFIERS[$CURRENT_BIGGIFIER]}"
+        CURRENT_BIGGIFIER=0
+        while [ $VALUE -gt 10000 ] ;do
+                VALUE=$(($VALUE/1000))
+                CURRENT_BIGGIFIER=$((CURRENT_BIGGIFIER+1))      
+        done
+        #echo "value: $VALUE"
+        #echo "biggifier: ${BIGGIFIERS[$CURRENT_BIGGIFIER]}"
+        echo "$VALUE${BIGGIFIERS[$CURRENT_BIGGIFIER]}"
 }
 
 system_ip=`ifconfig | awk -F':' '/inet addr/&&!/127.0.0.1/{split($2,_," ");print _[1]}'`

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #
-#   20-updates - create the system updates section of the MOTD
+#   30-updates - create the system updates section of the MOTD
 #    Copyright (c) 2014-2015 Erik Hennerfors
 #    Copyright (c) 2013-2014 Nick Charlton
 #
