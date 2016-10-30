@@ -31,18 +31,18 @@ The default behaviour of motd is to present a combination of /etc/motd (which is
 
 Installation
 ------------
-1)
+1.
   - sudo apt-get update
   - sudo apt-get install figlet python-dev python-apt git
-
-2) cd /etc/
-  - Skapa en katalog vid namn update-motd.d
+2. 
+  go to /etc/
+  - Create a folder named "update-motd.d"
   - sudo chmod a+x update-motd.d
-  - sudo git clone https://payway-system-user@bitbucket.org/gonace/debian-motd.git . 
+  - sudo git clone https://username@bitbucket.org/gonace/debian-motd.git . 
   - sudo git checkout jessie
   - sudo chmod +x *-*
-
-3) cd /etc/
+3. 
+  go to /etc/
   - sudo rm motd
   - sudo rm /var/run/motd*
   - sudo ln -s  
