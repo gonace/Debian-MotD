@@ -45,7 +45,7 @@ Installation
   go to /etc/
   - sudo rm motd
   - sudo rm /var/run/motd*
-  - sudo ln -s  
+  - sudo ln -s /var/run/motd motd
 
 
 Result
