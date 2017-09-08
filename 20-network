@@ -37,7 +37,7 @@ function human_readable {
         echo "$VALUE${BIGGIFIERS[$CURRENT_BIGGIFIER]}"
 }
 
-system_ip=`ifconfig | awk -F':' '/inet addr/&&!/127.0.0.1/{split($2,_," ");print _[1]}'`
+system_ip=`hostname -I`
 nic_in=`grep eth0 /proc/net/dev | awk '{print $2}'`
 nic_out=`grep eth0 /proc/net/dev | awk '{print $10}'`
 
