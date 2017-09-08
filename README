@@ -31,11 +31,25 @@ The default behaviour of motd is to present a combination of /etc/motd (which is
 
 Installation
 ------------
+1.
+  - sudo apt-get update
+  - sudo apt-get install figlet python-dev python-apt git
+2. 
+  go to /etc/
+  - Create a folder named "update-motd.d"
+  - sudo chmod a+x update-motd.d
+  - sudo git clone https://username@bitbucket.org/gonace/debian-motd.git . 
+  - sudo git checkout jessie
+  - sudo chmod +x *-*
+3. 
+  go to /etc/
+  - sudo rm motd
+  - sudo rm /var/run/motd*
+  - sudo ln -s /var/run/motd.dynamic.new motd
 
 
 Result
 ------
-	Linux obscured-mysql02 3.2.0-4-amd64 #1 SMP Debian 3.2.60-1+deb7u1 x86_64
        _                                 _                                 _ 
 	  ___ | |__  ___  ___ _   _ _ __ ___  __| |      _ __ ___  _   _ ___  __ _| |
 	 / _ \| '_ \/ __|/ __| | | | '__/ _ \/ _` |_____| '_ ` _ \| | | / __|/ _` | |
@@ -43,7 +57,7 @@ Result
 	 \___/|_.__/|___/\___|\__,_|_|  \___|\__,_|     |_| |_| |_|\__, |___/\__, |_|
 	                                                           |___/        |_|  	            
 
-	Welcome to Debian GNU/Linux 7.5 (wheezy) (3.2.0-4-amd64).
+	Welcome to Debian GNU/Linux 9.1 (stretch) (4.9.0-3-amd64).
 
 	System information as of: Tue Dec 16 09:26:18 CET 2014
 
@@ -53,11 +67,11 @@ Result
 	System uptime:	70 days, 16h 47m 51s
 
 	Network information:
-	System IP:	10.0.5.101
+	System IP:	10.2.5.100
 	Traffic in:	27Gb	Traffic out:	65Gb
 
 	Updates:
 	71 updates to install.
 	0 are security updates.
 
-	Last login: Mon Dec 15 12:48:44 2014 from 10.0.2.13
+	Last login: Mon Dec 15 12:48:44 2014 from 10.2.2.13
