@@ -38,7 +38,7 @@ Installation
   go to /etc/
   - Create a folder named "update-motd.d"
   - sudo chmod a+x update-motd.d
-  - sudo git clone https://username@bitbucket.org/gonace/debian-motd.git . 
+  - sudo git clone git@github.com:gonace/Debian-MotD.git . 
   - sudo git checkout jessie
   - sudo chmod +x *-*
 3. 
