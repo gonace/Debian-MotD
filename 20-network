@@ -25,19 +25,19 @@
 
 
 function human_readable {
-        VALUE=$1
-        BIGGIFIERS=( B Kb Mb Gb )
-        CURRENT_BIGGIFIER=0
-        while [ $VALUE -gt 10000 ] ;do
-                VALUE=$(($VALUE/1000))
-                CURRENT_BIGGIFIER=$((CURRENT_BIGGIFIER+1))      
-        done
-        #echo "value: $VALUE"
-        #echo "biggifier: ${BIGGIFIERS[$CURRENT_BIGGIFIER]}"
-        echo "$VALUE${BIGGIFIERS[$CURRENT_BIGGIFIER]}"
+    VALUE=$1
+    BIGGIFIERS=( B Kb Mb Gb )
+    CURRENT_BIGGIFIER=0
+    while [ $VALUE -gt 10000 ] ;do
+            VALUE=$(($VALUE/1000))
+            CURRENT_BIGGIFIER=$((CURRENT_BIGGIFIER+1))      
+    done
+    #echo "value: $VALUE"
+    #echo "biggifier: ${BIGGIFIERS[$CURRENT_BIGGIFIER]}"
+    echo "$VALUE${BIGGIFIERS[$CURRENT_BIGGIFIER]}"
 }
 
-system_ip=`ifconfig | awk -F':' '/inet addr/&&!/127.0.0.1/{split($2,_," ");print _[1]}'`
+system_ip=`ifconfig | awk '/inet /&&!/127.0.0.1/{split($2,_," ");print _[1]}'`
 nic_in=`grep eth0 /proc/net/dev | awk '{print $2}'`
 nic_out=`grep eth0 /proc/net/dev | awk '{print $10}'`
 
