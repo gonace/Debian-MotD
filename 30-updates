@@ -113,6 +113,6 @@ for pkg in cache.packages:
             break
 
 print "Updates:"
-print "%d updates to install." % upgrades
-print "%d are security updates." % security_upgrades
+print "%d packages can be updated." % upgrades
+print "%d updates are security updates." % security_upgrades
 print "" # leave a trailing blank line
