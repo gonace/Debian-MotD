@@ -33,15 +33,13 @@ The default behaviour of motd is to present a combination of /etc/motd (which is
 1.
   - sudo apt-get update
   - sudo apt-get install figlet python-dev python-apt git
-2. 
-  go to /etc/
+2. go to /etc/
   - Create a folder named "update-motd.d"
   - sudo chmod a+x update-motd.d
   - sudo git clone https://github.com/gonace/Debian-MotD.git . 
   - sudo git checkout jessie
   - sudo chmod +x *-*
-3. 
-  go to /etc/
+3. go to /etc/
   - sudo rm motd
   - sudo rm /var/run/motd*
   - sudo ln -s /var/run/motd motd
